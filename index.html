@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>活動記録</title>
+    <link rel="stylesheet" href="src/css/index.css">
+    <script src="https://code.jquery.com/jquery-3.6.3.js" integrity="sha256-nQLuAZGRRcILA+6dMBOvcRh5Pe310sBpanc6+QBmyVM=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <h1 id="title">活動記録</h1>
+    <div id="top">
+        <div id="left">
+            <div id="leftTop">
+                <h3 id="menuTitle">リンク</h3>
+            </div>
+            <ul>
+                <li><a href="">チーム</a></li>
+                <li><a href="">活動記録</a></li>
+                <li><a href="">目標</a></li>
+            </ul>
+        </div>
+        <div id="main">
+            <h3>練習記録</h3>
+            <form method="post" enctype="multipart/form-data" id="editArea">
+                <table id="editTable">
+                    <tbody>
+                        <tr>
+                            <td class="content" id="contentTop">練習日</td>
+                            <td id="dateTop"><input type="date" id="date"></td>
+                        </tr>
+                        <tr>
+                            <td class="content">練習メニュー</td>
+                            <td><textarea id="menu" class="area" placeholder="練習の内容を書き込んでください"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="content">記録等</td>
+                            <td><textarea id="record" class="area" placeholder="記録などを書き込んでください"></textarea></td>
+                        </tr>
+                        <tr>
+                            <td class="content">練習強度</td>
+                            <td><input type="number" id="strength" min="0" max="100" placeholder="0~100"> %</td>
+                        </tr>
+                        <tr>
+                            <td class="content">体調</td>
+                            <td>
+                                <input id="bad" type="radio" value="bad" name="health"><label for="bad"><img src="src/images/bad.png" class="condition"></label>
+                                <input id="normal" type="radio" value="normal" name="health"><label for="normal"><img src="src/images/normal.png" class="condition"></label>
+                                <input id="good" type="radio" value="good" name="health"><label for="good"><img src="/src/images/good.png" class="condition"></label>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td class="content">メモ等</td>
+                            <td><textarea id="remarks" class="area" placeholder="今日の練習について自由に書き込んでください"></textarea></td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div id="btn">
+                    <button type="button" class="btn" id="commit">登録する</button>
+                </div>
+            </form>
+            <div id="margin">
+                <div id="mainUnder">
+                    <h3 id="reviewTitle">振り返り</h3>
+                    ここにカレンダーとか表示して練習内容を軽く見れるようにしたい・・・
+                </div>
+            </div>
+        </div>
+        <div id="right">
+            <div id="rightTop">
+                <h3 id="goalTitle">今週の目標</h3>
+            </div>
+            <div id="rightUnder">
+                <div id="goal">
+                    目標未設定
+                </div>
+                <div id="goalBtn">
+                    <a id="dummyBtn" href="">今週の目標を設定</a>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="src/js/index.js"></script>
+<!--<script src="src/js/calendar.js"></script>-->
+</body>
+</html>
